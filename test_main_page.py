@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-def test_guest_can_go_to_login_page(browser):
+def test_guest_can_go_to_login_page(browser, language):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/" + language
     browser.get(link)
     button_to_add_to_basket = browser.find_element(By.CSS_SELECTOR,
