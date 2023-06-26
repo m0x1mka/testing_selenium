@@ -19,4 +19,4 @@ def browser():
 @pytest.fixture(scope="function")
 def language(request):
     page_language = request.config.getoption("language")
-    yield page_language
+    return page_language
