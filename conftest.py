@@ -26,6 +26,7 @@ def browser(request):
     print("\nquit browser..")
     browser.quit()
 
+
 def language(request):
-    language = request.config.getoption("language")
-    yield language
+    page_language = request.config.getoption("language")
+    yield page_language
