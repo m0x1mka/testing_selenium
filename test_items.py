@@ -1,13 +1,12 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from .pages.main_page import MainPage
 import time
 
 
-def test_guest_can_go_to_login_page(language, browser):
-    link = f"http://selenium1py.pythonanywhere.com/{language}/catalogue/coders-at-work_207/"
-    browser.get(link)
-    time.sleep(30)
-    button_to_add_to_basket = browser.find_element(By.CSS_SELECTOR,
-                                                   "article form button[type='submit']")
-    assert button_to_add_to_basket is not None, "Here is no button!!!"
+def test_guest_can_go_to_login_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/"
+    page = MainPage(browser, link)
+    page.open()
+    page.go_to_login_page()
