@@ -8,4 +8,4 @@ def test_guest_can_go_to_login_page(browser, language):
     browser.get(link)
     button_to_add_to_basket = browser.find_element(By.CSS_SELECTOR,
                                                    "article form button[type='submit']")
-    assert button_to_add_to_basket is not None, "Your selectors are wrong"
+    assert button_to_add_to_basket is not None, "Here is no button!!!"
